@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "15672:15672" # 映射 RabbitMQ 的 web UI 端口到主机端口
+      - "5672:5672" # 映射 RabbitMQ 的 RPC 调用端口到主机端口
+    volumes:
+      - ./data:/var/lib/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest

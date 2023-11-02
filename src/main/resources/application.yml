@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss.SSS
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+logging:
+  level:
+    root: info
+
