@@ -1,7 +1,7 @@
 package com.example.rabbitmqdemo.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @author Levin
  */
 @Component
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class RabbitMQConfig {
 
     private final ObjectMapper objectMapper;
